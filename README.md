@@ -26,3 +26,12 @@ Terms to fit in later:
   GDPR (EU), 
   HIPPA
   PCI DSS
+  ---
+  * ASCII (encoding)
+  * TLS/SSL
+  *   Handshake:
+        Client Hello (accepted cipher suites)
+        Server hello
+        key exchange
+        finished messages
+      
