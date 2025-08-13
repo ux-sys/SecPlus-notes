@@ -35,3 +35,4 @@ Terms to fit in later:
         key exchange
         finished messages
       
+alias nmappy='nmap -Pn -n --disable-arp-ping'
