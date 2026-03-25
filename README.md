@@ -1,38 +1,162 @@
-# SecPlus-notes
-A systems perspective on Security + cert by CompTIA.
 
-Domains:
-1 General foundational security concepts
-2 Threats, vulnerabilities, and mitigations
-3 Security architecture (The layout and topology of the organization. Mostly planning phase)
-4 Security operations (Day to day actual cyber work related to employees, like SOC, MDM, etc)
-5 Lawyer, Manager, Accounting, and Finance perspective on cyber (mostly business and financial plans, also legal agreements)
+---
 
-  1 The base network IT infrastructure
-    Terms:
-      Standard (formal guidelines on how protocols should work. Eg SSH is protocol that states connection must be encrypted, but RFC 4251 specifies to use RSA. Example)
-        Standards by different orgs: RFC (IETF), IEEE 802.1q,  ISO/IEC #, ITU-T (Telecom and global networking), (Microsoft works with other orgs to develop standards, but they themselves publish technical specs for Microsoft products to implement the standard, MS-XXXX: ProtocolName)
-          Protocol (A protocol is a set of rules to communicate)
-      Software (an implementation of a specific protocol)
-      Software stack (Multiple software working together to achieve a specific purpose)
-      
-    Concepts:
+# 🔵 2. Sec+ Notes (STRUCTURED + UPGRADED)
 
+```markdown
+# Security+ Notes (Systems Perspective)
 
+Structured notes focused on understanding cybersecurity from a systems and operational perspective.
 
+---
 
-Terms to fit in later:
-  NIST
-  GDPR (EU), 
-  HIPPA
-  PCI DSS
-  ---
-  * ASCII (encoding)
-  * TLS/SSL
-  *   Handshake:
-        Client Hello (accepted cipher suites)
-        Server hello
-        key exchange
-        finished messages
-      
+## 🧩 Core Domains
+
+1. Security Fundamentals  
+2. Threats, Vulnerabilities, and Mitigations  
+3. Security Architecture (Design & Topology)  
+4. Security Operations (SOC, MDM, Monitoring)  
+5. Governance, Risk, and Compliance  
+
+---
+
+## 🏗️ Foundational Concepts
+
+### Standards & Protocols
+
+- **Standard** → formal guideline (e.g., RFC, IEEE, ISO)
+- **Protocol** → rules for communication (e.g., SSH, TLS)
+- **Software** → implementation of a protocol
+- **Software Stack** → multiple layers working together
+
+### Standards Bodies
+
+- RFC (IETF)  
+- IEEE (e.g., 802.1Q)  
+- ISO/IEC  
+- ITU-T  
+- Microsoft (MS-XXXX specs)  
+
+---
+
+## 🔐 Core Security Concepts
+
+- ASCII (encoding)
+- TLS / SSL
+- Handshake process:
+  - Client Hello
+  - Server Hello
+  - Key Exchange
+  - Finished Messages
+
+---
+
+## 🧠 Organizational Security Model
+
+Organizations operate in three layers:
+
+### Objective (WHY)
+- Defined in mission statement  
+- Determines priority of **CIA triad**  
+  - Confidentiality  
+  - Integrity  
+  - Availability  
+
+---
+
+### Goals (WHAT LEVEL)
+- Measurable targets  
+- Defines how much protection is required  
+- Maps CIA importance to assets  
+
+---
+
+### Tactics (HOW)
+- Day-to-day implementation  
+- Defines how controls are enforced  
+- Includes:
+  - Access control (AAA)
+  - Monitoring
+  - Incident response  
+
+---
+
+## 🔐 AAA Framework (Security Interrogation Model)
+
+A structured way to analyze any system.
+
+---
+
+### 1️⃣ Authentication (Identity)
+
+- Who verifies identity?
+- What proof is used? (password, token, cert)
+- How is it transmitted?
+- Where is it validated?
+- What artifact is issued? (session, JWT, ticket)
+- Where is it stored?
+- How long is it valid?
+- What invalidates it?
+- Can it be replayed?
+- Can it be forged?
+
+---
+
+### 2️⃣ Authorization (Access Control)
+
+- Where are permissions defined?
+- What determines access? (role, group, claims)
+- Where is access evaluated?
+- Centralized or distributed?
+- Checked every request?
+- Can permissions be inherited?
+- Can they be delegated?
+- Are there default permissions?
+- What happens on failure?
+- Can identity context change?
+
+---
+
+### 3️⃣ Accounting (Logging & Visibility)
+
+- What is logged?
+- Where are logs stored?
+- Who can access logs?
+- Are logs immutable?
+- Are failures logged?
+- Are privilege changes tracked?
+- Are tokens logged?
+- Can logs be bypassed?
+
+---
+
+## 🧠 Why AAA Matters
+
+This framework helps analyze:
+- OAuth
+- Kerberos
+- IAM systems (AWS / Azure)
+- Web applications
+- Enterprise environments
+
+Instead of:
+> “Understand everything”
+
+You:
+> systematically interrogate the system
+
+---
+
+## 🧭 Operator Mindset
+
+- Use AAA as a scanning tool  
+- Identify weak points quickly  
+- Focus on inconsistencies  
+- Expand only where needed  
+
+---
+
+## ⚙️ Practical Alias Example
+
+```bash
 alias nmappy='nmap -Pn -n --disable-arp-ping'
